@@ -11,7 +11,20 @@ import "fmt"
 
 func main() {
 	for i := 0; i < 100; i++{
-		fmt.Println(i)
-		//fmt.Println("Fizz")
+		
+		var result string = ""
+
+		if i % 3 == 0 {
+			result += "fizz"
+		}
+		if i % 5 == 0 {
+			result += "buzz"
+		}
+		if result != "" {
+			fmt.Println(result)
+		}else{
+			fmt.Println(i)
+		}
+		
 	}
 }
