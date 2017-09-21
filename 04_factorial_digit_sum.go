@@ -9,14 +9,22 @@ import "fmt"
 
 func main() {
 
-	var num int  = 5
+	var num int  = 10
 	var factorial int = 1
 	
 	for i := 0; i < num; i++{
 		
 		factorial += factorial * i 
-		fmt.Println(factorial)
 	}
 
-	
+	fmt.Println(factorial)
+
+	var digit, sum int =  0,0;
+
+	for factorial > 0 {
+		digit = factorial  % 10
+		sum += digit
+		factorial /=10
+	}
+	fmt.Println(sum)
 }
