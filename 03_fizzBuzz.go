@@ -10,7 +10,7 @@ package main
 import "fmt"
 
 func main() {
-	for i := 0; i < 100; i++{
+	for i := 1; i <= 100; i++{
 		
 		var result string = ""
 
@@ -24,6 +24,7 @@ func main() {
 			fmt.Println(result)
 		}else{
 			fmt.Println(i)
+			continue
 		}
 		
 	}
