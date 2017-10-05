@@ -1,6 +1,7 @@
 # Go Problem Sheet 1
 
 ## About
+### Daire Ní Chatháin: g00334757
 A set of exercises to learn the Go Language.
 Adapted from:https://github.com/data-representation/go-examples/blob/master/README.md
  
