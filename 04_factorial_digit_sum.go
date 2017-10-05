@@ -5,21 +5,30 @@
  */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/big"
+)
 
 func main() {
 
-	var num int  = 10
-	var factorial int = 1
+	//var num int  = 10
+	 num := big.NewInt(10)
+	//var factorial int = 1
+	factorial:= big.NewInt(1)
+	i := big.NewInt(0)
 	
-	for i := 0; i < num; i++{
+	for  i < num; i++{
 		//calculate factorial
 		factorial += factorial * i 
 	}
 	//print factorial
 	fmt.Println(factorial)
 
-	var digit, sum int =  0,0;
+	//var digit, sum int =  0,0;
+	digit:= big.NewInt(0)
+	sum:= big.NewInt(0)
+	
 	
 	//while there are  are more than 0 digits in the number
 	for factorial > 0 {
