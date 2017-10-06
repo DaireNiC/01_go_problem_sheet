@@ -9,19 +9,23 @@ the same number multiple times consecutively.
 
 package main
 
-import "fmt"
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
 	
 	var answer, guess, previous_guess, try_count int = 0,0,0,0
 
-	//generate a pseudorandom number between 1 - 100
-	answer = rand.Intn(100)
+	//generate a random number each time between 1 - 100
+	rand.Seed(int64(time.Now().Nanosecond())) 
+	var answer = ((rand.Int() % 100) + 1)    
 
 	//Take in user's guess
 	fmt.Println("Take a guess: ")
-    fmt.Scanf("%d", &guess)
+   	fmt.Scanf("%d", &guess)
 
 	//Keep looping until user guesses correct num
 	for guess != answer {
